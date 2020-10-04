@@ -23,3 +23,18 @@ variable "instance_type" {
 variable "instance_count" {
   default = "3"
 }
+
+variable "server_port" {
+  description = "The port the server will use for HTTP requests"
+  type        = number
+}
+
+variable "subnet_public" {
+  description = "A number of subnets in CIDR notation for public use"
+  default     = []
+}
+
+variable "security_group" {
+  description = "Security group name"
+  default     = []
+}

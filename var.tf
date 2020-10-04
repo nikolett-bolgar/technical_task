@@ -71,3 +71,9 @@ variable "public_subnets" {
   description = "A number of subnets in CIDR notation for public use"
   default     = 2
 }
+
+variable "instances" {
+  description = "Instance name"
+  default     = []
+
+}

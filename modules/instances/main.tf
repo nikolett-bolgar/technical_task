@@ -10,11 +10,13 @@ resource "aws_instance" "web" {
   ami                         = var.web_ami
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.ec2key.key_name
+  vpc_security_group_ids      = var.security_group.id
+  subnet_id                   = var.subnet_public.id
   associate_public_ip_address = true
   user_data                   = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
-              nohup busybox httpd -f -p 8080 &
+              nohup busybox httpd -f -p "${var.server_port}" &
               EOF
 
   tags = {
