@@ -6,7 +6,7 @@ resource "aws_key_pair" "ec2key" {
 
 # Deploy EC2 Instances
 resource "aws_instance" "web" {
-  count                       = var.instance_count
+  count                       = length(var.instance_count)
   ami                         = var.web_ami
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.ec2key.key_name
