@@ -14,6 +14,9 @@ module "instances" {
   instance_type     = var.instance_type
   web_ami           = var.web_ami
   instance_count    = var.instance_count
+  server_port       = var.server_port
+  security_group    = module.vpc.security_group
+  subnet_public     = module.vpc.subnet_public
 
 }
 

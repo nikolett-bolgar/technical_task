@@ -41,6 +41,11 @@ variable "instance_count" {
   default = "3"
 }
 
+variable "server_port" {
+  description = "The port the server will use for HTTP requests"
+  type        = number
+}
+
 #Modules/VPC
 variable "vpc_cidr" {
   description = "IP CIDR block of the vpc network"
