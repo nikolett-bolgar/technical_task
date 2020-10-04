@@ -82,3 +82,12 @@ variable "instances" {
   default     = []
 
 }
+
+# Modules/ECS
+variable "ecs_name" {
+  description = "The name of the ECS cluster"
+}
+
+variable "cluster_id" {
+  description = "The ECS cluster ID"
+}

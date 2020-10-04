@@ -32,3 +32,14 @@ module "vpc" {
   instances            = module.instances.instances
 
 }
+
+module "ecs" {
+  source = ".//modules/ecs"
+
+  ecs_name        = var.ecs_name
+  cluster_id      = var.cluster_id
+  public_subnets  = module.vpc.subnet_public
+  private_subnets = module.vpc.subnet_private
+  vpc_cidr        = module.vpc.vpc_cidr
+
+}
