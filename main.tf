@@ -5,6 +5,7 @@ provider "aws" {
   region     = var.aws_region
 }
 
+# Modules
 module "instances" {
   source = ".//modules/instances"
 
