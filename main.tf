@@ -12,4 +12,6 @@ module "instances" {
   public_key_path   = var.public_key_path
   instance_type     = var.instance_type
   web_ami           = var.web_ami
+  instance_count    = var.instance_count
+
 }

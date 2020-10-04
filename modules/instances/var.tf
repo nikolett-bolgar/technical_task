@@ -19,3 +19,7 @@ variable "instance_type" {
   type        = string
 
 }
+
+variable "instance_count" {
+  default = "3"
+}
