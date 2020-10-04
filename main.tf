@@ -36,7 +36,7 @@ module "vpc" {
 module "ecs" {
   source = ".//modules/ecs"
 
-  name            = var.ecs_name
+  ecs_name        = var.ecs_name
   cluster_id      = var.cluster_id
   public_subnets  = module.vpc.subnet_public
   private_subnets = module.vpc.subnet_private

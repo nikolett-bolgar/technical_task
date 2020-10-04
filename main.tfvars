@@ -19,4 +19,5 @@ instances         = "web"
 security_group    = "web-sg"
 
 # Modules/ECS
-ecs_name = "nignx"
+ecs_name   = "nignx"
+cluster_id = "nignx"

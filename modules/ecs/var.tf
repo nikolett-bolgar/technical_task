@@ -15,3 +15,12 @@ variable "private_subnets" {
 variable "vpc_cidr" {
   description = "IP CIDR block of the vpc network"
 }
+
+variable "cluster_id" {
+  description = "The ECS cluster ID"
+}
+
+variable "security_group" {
+  description = "Security group name"
+  default     = []
+}
