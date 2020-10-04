@@ -14,3 +14,6 @@ vpc_cidr          = "10.0.0.0/16"
 public_subnets    = ["10.0.0.0/24", "10.0.1.0/24"]
 private_subnets   = ["10.0.50.0/24", "10.0.51.0/24"]
 availability_zone = "eu-west-2a"
+server_port       = 8080
+instances         = "web"
+security_group    = "web-sg"
