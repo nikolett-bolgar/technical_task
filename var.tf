@@ -63,6 +63,7 @@ variable "enable_dns_support" {
 
 variable "availability_zone" {
   description = "Availablity Zone"
+  type = list
   default     = []
 }
 
